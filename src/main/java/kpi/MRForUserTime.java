@@ -56,7 +56,7 @@ public class MRForUserTime {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         Path path = new Path("D:\\BigData\\outcome\\kpi\\userTime");
-        FileInputFormat.setInputPaths(job, new Path("D:\\BigData\\sample\\homework\\UsersAndBrowsers"));
+        FileInputFormat.setInputPaths(job, new Path("D:\\BigData\\sample\\UsersAndBrowsers"));
         FileOutputFormat.setOutputPath(job, path);
         ClearOutput.delete(path);
         job.waitForCompletion(true);
